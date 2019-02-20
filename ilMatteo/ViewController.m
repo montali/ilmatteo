@@ -211,8 +211,8 @@
     NSNumber *temperature = [NSNumber numberWithInt:temperatureInt];
     [_temperatureLabel setText:[[temperature stringValue] stringByAppendingString:@"°C"]];
     [_conditionsLabel setText:[[[[[NSNumber numberWithInteger:[[withConditions tempMin] intValue]] stringValue] stringByAppendingString:@"°/"] stringByAppendingString:    [[NSNumber numberWithInteger:[[withConditions tempMax] intValue]] stringValue]] stringByAppendingString:@"°C"]];
-    [_mmPrecLabel setText:[[[withConditions mmPrec] stringValue] stringByAppendingString:@" mm"]];
-    [_ventoLabel setText:[[[withConditions windSpeed] stringValue] stringByAppendingString:@" m/s"]];
+    [_mmPrecLabel setText:[[[NSNumber numberWithInt:[[withConditions mmPrec] intValue]] stringValue] stringByAppendingString:@" mm"]];
+    [_ventoLabel setText:[[[NSNumber numberWithInt:[[withConditions windSpeed] intValue]] stringValue] stringByAppendingString:@" m/s"]];
     [_precPercent setText:[[[withConditions percPrec] stringValue] stringByAppendingString:@" %"]];
     [_pressureLabel setText:[[[NSNumber numberWithInteger:[[withConditions currentPressure] integerValue]] stringValue] stringByAppendingString:@" hPa"]];
     NSString *condizioni;
